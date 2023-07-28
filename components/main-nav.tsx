@@ -14,9 +14,10 @@ export function MainNav({ items }: MainNavProps) {
       <Link href="/" className="flex items-center space-x-2">
       <Image
               src="/images/logotipo-horizontal-sin-tagline.svg"
-              alt="rocket"
+              alt="agencia impulso - transformación digital de pequeños comercios"
               width={150}
               height={80}
+              layout="fix"
             />
       </Link>
       {items?.length ? (
