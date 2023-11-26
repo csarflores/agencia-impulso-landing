@@ -10,9 +10,10 @@ const Footer = () => {
           <div className="lg:w-1/3 mt-8">
             <Image
               src="/images/logotipo-horizontal.svg"
-              alt="rocket"
+              alt="agencia impulso - transformación digital de pequeños comercios"
               width={300}
               height={150}
+              layout="fix"
             />
           </div>
           <div className="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4">
