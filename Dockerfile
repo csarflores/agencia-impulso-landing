@@ -7,7 +7,7 @@ COPY package*.json .
 #solo instala todas las dependencias
 RUN npm install
 #copia todos los archivos del proyecto en el contenedor
-COPY . .
+COPY . /workspace/
 #crea una version de produccion solo las dependencias necesarias
 RUN npm run build
 #expone por que puerto se va a conectar el contenedor
