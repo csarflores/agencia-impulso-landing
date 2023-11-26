@@ -1,16 +1,16 @@
-#version de node a utilizar
+# Versión de node a utilizar
 FROM node:alpine
-#nombre del directorio dentro del contenedor
+# Nombre del directorio dentro del contenedor
 WORKDIR /app
-#copie todos los archivos que comiencen por package y terminen con json
-COPY package*.json .
-#solo instala todas las dependencias
+# Copiar solo los archivos relacionados con el paquete antes de instalar dependencias
+COPY package*.json ./
+# Solo instala las dependencias
 RUN npm install
-#copia todos los archivos del proyecto en el contenedor
-COPY . /workspace/
-#crea una version de produccion solo las dependencias necesarias
+# Copia todos los archivos del proyecto en el directorio de trabajo
+COPY . .
+# Crea una versión de producción con solo las dependencias necesarias
 RUN npm run build
-#expone por que puerto se va a conectar el contenedor
+# Expone el puerto al que se conectará el contenedor
 EXPOSE 3000
-#actividad/comando/proceso principal a ejecutar
-CMD [ "npm", "start" ]
+# Comando principal a ejecutar
+CMD ["npm", "start"]
